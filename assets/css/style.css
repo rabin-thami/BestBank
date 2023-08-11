@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 header {
+    user-select: none;
+    min-width: 4em;
     width: 100%;
     display: flex;
     align-items: center;
@@ -28,3 +32,118 @@ header nav ul {
     gap: 5em
 
 }
+
+header ul li {
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all ease 0.2s;
+}
+
+header ul li:hover {
+    color: #fff;
+    cursor: pointer;
+    /* text-decoration: underline 2px solid; */
+}
+
+.button-section {
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.button-section .btn {
+    width: 10%;
+    padding: 1em 2em;
+    border: 2px solid #FFA724;
+    border-radius: 2em;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all ease 0.2s;
+}
+
+.button-section .btn:hover {
+    background-color: #FFA724;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.bank-info {
+    display: flex;
+    gap: 2em;
+    text-align: left;
+    justify-content: center;
+}
+
+.bank-info .box {
+    width: 25em;
+    text-align: left;
+}
+
+.account-details ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.account-details ul li {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 8em;
+    padding: 1.2em 1em;
+    margin: 1em 0;
+    border: 2px solid #FFA724;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: all ease 0.2s;
+}
+
+
+.account-details ul li:hover {
+    background: #FFD18C;
+    cursor: pointer;
+
+}
+
+.spending-info {
+    width: 100%;
+}
+
+.bar {
+    display: flex;
+    background-color: #FFA724;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    gap: 1em;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.bar span:last-child {
+    margin-left: auto;
+    margin-right: 0.5em; /* Add space between the text and the right edge */
+  }
+
+.bar.rent {
+    width: 90%;
+}
+
+.bar.groceries {
+    width: 80%;
+}
+
+.bar.restaurants {
+    width: 70%;
+}
+
+.bar.transport {
+    width: 60%;
+}
+
+.bar.internet {
+    width: 50%;
+  }
+  
