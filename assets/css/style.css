@@ -120,6 +120,12 @@ header ul li:hover {
     gap: 1em;
     border-radius: 15px;
     font-weight: 600;
+    transition: all ease 0.2s;
+}
+
+.bar:hover {
+    background-color: #FFD18C;
+    cursor: pointer;
 }
 
 .bar span:last-child {
@@ -146,4 +152,17 @@ header ul li:hover {
 .bar.internet {
     width: 50%;
   }
+
+
+.bar.netflix {
+    width: 90%;
+}
+
+.bar.hbo{
+    width: 80%;
+}
+
+.bar.setapp {
+    width: 70%;
+}
   

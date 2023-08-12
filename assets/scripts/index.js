@@ -1,54 +1,110 @@
-const accounts = [
-    {
-        id: 1,
-        title: "Main Account",
-        balance: "6700.56",
-        spendings: [
-            {
-                category: "Rent",
-                spent: "1450"
-            },
-            {
-                category: "Groceries",
-                spent: "564"
-            },
-            {
-                category: "Restaurants",
-                spent: "123"
-            },
-            {
-                category: "Transport",
-                spent: "81"
-            },
-            {
-                category: "Internet",
-                spent: "50"
-            }
-        ]
-    },
-    {
-        id: 2,
-        title: "Expenses",
-        balance: "5134.63",
-        spendings: [
-            {
-                category: "Netflix",
-                spent: "19.99"
-            },
-            {
-                category: "HBO Max",
-                spent: "14.99"
-            },
-            {
-                category: "Setapp",
-                spent: "9.99"
-            }
-        ]
-    },
-    {
-        id: 3,
-        title: "Savings",
-        balance: "36500.12",
-        spendings: []
+import accounts from './accounts.js';
+
+const displayInfo = document.querySelector(".account-details");
+const spendingsInfo = document.querySelector(".spending-info")
+const ulElement = document.createElement("ul")
+
+for (let i = 0; i<accounts.length; i ++ ) {
+    let data = accounts[i]
+    ulElement.innerHTML += `
+    <li id="${data.id}" class="btn-account">
+        <span>${data.title}</span>
+        <span>$ ${data.balance}</span>
+    </li>
+    `
+
+    displayInfo.appendChild(ulElement)
+}
+
+mainAccount();
+displayInfo.addEventListener('click', function(e) {
+    const clickedLi = e.target.closest('li');
+    
+    if (clickedLi) {
+        const liId = clickedLi.id;
+            switch (liId) {
+                case '1':
+                    clearSpendingsInfo()
+                    mainAccount();
+                    break;
+
+                case '2':
+                    clearSpendingsInfo()
+                    expenses()
+                    break;
+
+                case '3':
+                    clearSpendingsInfo()
+                    saving()
+                    break;
+
+                default:
+                    break;
+        }
+        
     }
-]
+});
+
+function mainAccount() {
+    for (let i = 0; i < accounts.length; i++) {
+        let data = accounts[i];
+        if (data.id === 1) {
+            let spend = data.spendings;
+            const newEl = document.createElement("div");
+            for (let j = 0; j < spend.length; j++) {
+                let spendingData = spend[j];
+                let spendingCat = spendingData.category;
+                let spendingAmount = spendingData.spent;
+
+                newEl.innerHTML += `
+                    <div class="bar ${spendingCat.toLowerCase()}">
+                        <span>${spendingCat}</span>
+                        <span>$ ${spendingAmount}</span>
+                    </div>
+                `;
+            }
+            spendingsInfo.appendChild(newEl);
+        }
+    }
+}
+
+function expenses() {
+    for (let i = 0; i < accounts.length; i++) {
+        let data = accounts[i];
+
+        if (data.id === 2) {
+            let spend = data.spendings;
+
+            const newEl = document.createElement("div");
+            for (let j = 0; j < spend.length; j++) {
+                let spendingData = spend[j];
+                let spendingCat = spendingData.category;
+                let spendingAmount = spendingData.spent;
+
+                newEl.innerHTML += `
+                    <div class="bar ${spendingCat.toLowerCase()}">
+                        <span>${spendingCat}</span>
+                        <span>$ ${spendingAmount}</span>
+                    </div>
+                `
+            }
+            spendingsInfo.appendChild(newEl);
+        }
+    }
+}
+  
+function saving() {
+     const newEl = document.createElement("div");
+        newEl.innerHTML += `
+            <div class="bar "style="text-align:left;">
+                <span>No spending in saving section</span>
+            </div>
+        `
+    spendingsInfo.appendChild(newEl);
+}
+
+function clearSpendingsInfo() {
+    while (spendingsInfo.firstChild) {
+        spendingsInfo.removeChild(spendingsInfo.firstChild);
+    }
+}
