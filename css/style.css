@@ -25,6 +25,7 @@ nav img {
 /*Mobile Menus*/
 .hidden {
     display: none;
+    visibility: hidden;
 }
 .mobile-menu ul {
     margin: 1em 0;
@@ -33,6 +34,7 @@ nav img {
 }
 
 .mobile-menu ul li {
+    text-align: center;
     padding: 1em;
     justify-content: center;
     transition: all ease 0.5s;
@@ -97,5 +99,3 @@ nav img {
     border-radius: 5px;
     background-color: #FFA724;
 }
-
-

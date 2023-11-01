@@ -113,7 +113,12 @@ const menuBtn = document.querySelector('.bx-menu');
 const toggleMenu = document.querySelector('.mobile-menu');
 
 menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('bx-menu');
-    menuBtn.classList.toggle('bx-x');
-    toggleMenu.classList.toggle('hidden');
+    if (menuBtn.classList.contains('bx-menu')) {
+       
+        menuBtn.classList.replace('bx-menu', 'bx-x');
+        toggleMenu.classList.remove('hidden');
+    } else {
+        menuBtn.classList.replace('bx-x', 'bx-menu');
+        toggleMenu.classList.add('hidden');
+    }
 });
