@@ -1,4 +1,4 @@
-// import accounts from './accounts.js';
+
 
 // const displayInfo = document.querySelector(".account-details");
 // const spendingsInfo = document.querySelector(".spending-info")
@@ -29,7 +29,7 @@
 //                     break;
 
 //                 case '2':
-//                     clearSpendingsInfo()
+//                      ()
 //                     expenses()
 //                     break;
 
@@ -108,9 +108,12 @@
 //         spendingsInfo.removeChild(spendingsInfo.firstChild);
 //     }
 // }
-
+import accounts from './accounts.js';
 const menuBtn = document.querySelector('.bx-menu');
 const toggleMenu = document.querySelector('.mobile-menu');
+const accountHolderEl = document.querySelector('.account-item-holder')
+const spendingHolderEl = document.querySelector('.spending-item-holder')
+
 
 menuBtn.addEventListener('click', () => {
     if (menuBtn.classList.contains('bx-menu')) {
@@ -121,3 +124,45 @@ menuBtn.addEventListener('click', () => {
         toggleMenu.style.display = "none";
     }
 });
+
+/*Rending the Account Items */
+accounts.forEach((accountItem, index) => {
+    let accountItemHolder = document.createElement('li')
+
+    accountItemHolder.innerHTML = `
+        <p>${accountItem.title}</p>
+        <p>$ ${accountItem.balance}</p>
+    `;
+
+    accountHolderEl.appendChild(accountItemHolder);
+    /*Checking the index number to add active status */
+    if (index === 0 ) {
+        accountItemHolder.classList.add('active')
+    }
+});
+
+/*checking click event */
+
+accountHolderEl.addEventListener('click', () => {
+    mainAccount(2)
+})
+
+
+function mainAccount(accountId) {
+    const account = accounts.find(acc => acc.id = accountId)
+    console.log(account.id);
+    
+    if(account) {
+        const spendings = account.spendings;
+        
+        spendings.forEach(speandingdata => {
+            const spedingsDataHolder = document.createElement('li')
+            spedingsDataHolder.innerHTML = `
+                <p>${speandingdata.category}</p>
+                <p>${speandingdata.spent}</p>
+            `;
+
+            spendingHolderEl.appendChild(spedingsDataHolder)
+        })
+    }
+}
