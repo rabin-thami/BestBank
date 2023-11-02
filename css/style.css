@@ -102,6 +102,8 @@ nav img {
 
 @media only screen and (min-width: 768px) {
     header {
+
+        margin: 1em 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -133,5 +135,26 @@ nav img {
         padding: 1em;
         justify-content: center;
         transition: all ease 0.5s;
+    }
+
+    .hero-btn-section button {
+        padding: 1em;
+        width: 15em;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .account-spendings-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .account-spendings-section .account-section {
+        width: 45%;
+    }
+
+    .account-spendings-section .spending-section {
+        width: 45%;
     }
 }
