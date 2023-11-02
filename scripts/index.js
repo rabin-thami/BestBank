@@ -114,11 +114,10 @@ const toggleMenu = document.querySelector('.mobile-menu');
 
 menuBtn.addEventListener('click', () => {
     if (menuBtn.classList.contains('bx-menu')) {
-       
         menuBtn.classList.replace('bx-menu', 'bx-x');
-        toggleMenu.classList.remove('hidden');
+        toggleMenu.style.display = "block";
     } else {
         menuBtn.classList.replace('bx-x', 'bx-menu');
-        toggleMenu.classList.add('hidden');
+        toggleMenu.style.display = "none";
     }
 });

@@ -23,10 +23,10 @@ nav img {
 }
 
 /*Mobile Menus*/
-.hidden {
+.mobile-menu {
     display: none;
-    visibility: hidden;
 }
+
 .mobile-menu ul {
     margin: 1em 0;
     list-style: none;
@@ -41,7 +41,6 @@ nav img {
 }
 
 /*Hero BUtton section */
-
 .hero-btn-section {
     margin: 1.5em 1em;
     text-align: center;
@@ -77,10 +76,10 @@ nav img {
 
 .account-section ul li:hover, 
 .account-section ul li:active, 
-.active, 
 .hero-btn-section button:hover, 
 .mobile-menu ul li:hover,
-.mobile-menu ul li:active
+.mobile-menu ul li:active,
+.active
 {
     background-color: #FFA724;
     cursor: pointer;
@@ -98,4 +97,41 @@ nav img {
     border: 1px solid #FFA724;
     border-radius: 5px;
     background-color: #FFA724;
+}
+
+
+@media only screen and (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    header nav img {
+        margin: 0 auto;
+        width: 18em;
+    }
+
+    header nav .bx {
+        display: none;
+    }
+
+    header .mobile-menu {
+        display: block;
+    }
+    
+    .mobile-menu ul {
+        margin: 1em 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #FFD18C;
+    }
+    
+    .mobile-menu ul li {
+        text-align: center;
+        padding: 1em;
+        justify-content: center;
+        transition: all ease 0.5s;
+    }
 }
