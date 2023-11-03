@@ -6,23 +6,23 @@ const accounts = [
         spendings: [
             {
                 category: "Rent",
-                spent: "1450"
+                spent: "900"
             },
             {
                 category: "Groceries",
-                spent: "564"
+                spent: "700"
             },
             {
                 category: "Restaurants",
-                spent: "123"
+                spent: "500"
             },
             {
                 category: "Transport",
-                spent: "81"
+                spent: "350"
             },
             {
                 category: "Internet",
-                spent: "50"
+                spent: "250"
             }
         ]
     },
@@ -32,16 +32,16 @@ const accounts = [
         balance: "5134.63",
         spendings: [
             {
-                category: "Netflix",
-                spent: "19.99"
+                category: "Server",
+                spent: "499.99"
             },
             {
-                category: "HBO Max",
-                spent: "14.99"
+                category: "PC Maintenance",
+                spent: "399.99"
             },
             {
                 category: "Setapp",
-                spent: "9.99"
+                spent: "299.99"
             }
         ]
     },
