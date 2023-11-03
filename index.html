@@ -1,83 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Best Bank</title>
-    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <img src="assets/image/bestbank_logo.png" alt="">
         <nav>
+            <img src="image/bestbank_logo.png" alt="best bank logo">
+            <i class='bx bx-menu'></i>
+        </nav>
+        <aside class="mobile-menu">
             <ul>
                 <li>Home</li>
                 <li>Payments</li>
-                <li>Saving</li>
+                <li>Savings</li>
                 <li>Financing</li>
                 <li>Stocks</li>
             </ul>
-        </nav>
+        </aside>
     </header>
-  <main>
-    <section class="button-section">
-        <button class="btn">Pay</button>
-        <button class="btn">Transfer</button>
-    </section>
-
-    <section class="bank-info">
-        <div class="box">
-            <h1>Account</h1>
-            <div class="account-details">
-                
-                <!-- <ul>
-                    <li id="mainAccount">
-                        <span>Main Aaccount</span>
-                        <span>$ 5,134.63</span>
-                    </li>
-                    <li id="expenses">
-                        <span>Expenses</span>
-                        <span>$ 5,134.63</span>
-                    </li>
-                    <li id="saving">
-                        <span>Savings</span>
-                        <span>$ 36,500.12</span>
-                    </li>
-
-                </ul> -->
+    <main>
+        <section class="hero-btn-section">
+            <button>Pay</button>
+            <button>Transfer</button>
+        </section>
+        <section class="account-spendings-section">
+            <div class="account-section">
+                <h1>Accounts</h1>
+                <ul class="account-item-holder">
+                    <!-- Fetching Data From JavaScript -->
+                </ul>
             </div>
-        </div>
-        <div class="box">
-            <h1>Spendings</h1>
-            <div class="spending-info">
-
-               <!-- <div class="bar rent">
-                    <span>Rent</span>
-                    <span>$1234</span>
-               </div>
-               <div class="bar groceries">
-                    <span>Groceries</span>
-                    <span>$1234</span>
-               </div>
-               <div class="bar restaurants">
-                    <span>Restaurants</span>
-                    <span>$1234</span>
-               </div>
-               <div class="bar transport">
-                    <span>Transport</span>
-                    <span>$1234</span>
-               </div>
-               <div class="bar internet">
-                    <span>Internet</span>
-                    <span>$1234</span>
-               </div> -->
+            <div class="spending-section">
+                <h1>Spendings</h1>
+                <ul class="spending-item-holder">
+                    <!-- Fetching Data From JavaScript -->
+                </ul>
             </div>
-        </div>
-    </section>
-  </main>
-
-
-
-
-    <script type="module" src="assets/scripts/index.js"></script>
+        </section>
+    </main>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 </html>
