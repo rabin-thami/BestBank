@@ -11,6 +11,7 @@ header {
 }
 
 nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -146,7 +147,6 @@ nav img {
     }
 
     .account-spendings-section {
-        width: 100%;
         display: flex;
         justify-content: space-around;
     }
